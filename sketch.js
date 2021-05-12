@@ -13,7 +13,7 @@ function setup(){
     createCanvas(600,900);
     
     for(var i = 0; i < maxDrops; i = i + 1){
-        drops.push (new Drop(random(0,600),random(0,800)));
+        drops.push (new createDrop(random(0,600),random(0,800)));
         
     }
 }
@@ -23,7 +23,8 @@ function draw(){
     background(0);
 
     for(var i = 0; i<maxDrops; i++){
-        drops[i].display();
+        drops[i].showDrop();
+        drops[i].updateY();
     }
     drawSprites()
 }   
